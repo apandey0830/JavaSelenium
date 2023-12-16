@@ -9,9 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.time.Duration;
 import java.util.Properties;
 
@@ -65,6 +63,14 @@ public class BaseClass {
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         }
 
+    }
+
+    public void waitForEnterKey() {
+        try {
+            new BufferedReader(new InputStreamReader(System.in)).readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @AfterSuite

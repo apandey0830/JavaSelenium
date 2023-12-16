@@ -21,7 +21,7 @@ public class AmazonUKShoppingTest extends BaseClass {
 
         if (capchaPage.isCaptchaPresent()) {
             System.out.println("CAPTCHA detected! Please solve it manually and press Enter to resume...");
-            new Scanner(System.in).nextLine();
+            waitForEnterKey();
         }
 
         LandingPage landingPage = new LandingPage(driver);
