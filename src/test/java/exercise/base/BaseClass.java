@@ -57,6 +57,8 @@ public class BaseClass {
             }
 
             driver.get(config.getProperty("testsiteukurl"));
+            driver.navigate().refresh();
+
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         }

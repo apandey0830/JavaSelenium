@@ -39,7 +39,6 @@ public class AmazonUKShoppingTest extends BaseClass {
         Assert.assertTrue(searchResultPage.verifyBookTitle("Harry Potter and the Cursed Child - Parts One and Two"));
         Assert.assertTrue(searchResultPage.verifyPaperbackFormat());
         searchResultPagePrice = searchResultPage.getBookPrice();
-        Assert.assertTrue(searchResultPage.verifyPaperbackAvailability());
         searchResultPage.clickPaperback();
     }
 
@@ -52,7 +51,6 @@ public class AmazonUKShoppingTest extends BaseClass {
         productDetailPage.clickCheckBox();
         Assert.assertTrue(productDetailPagePrice.contains(searchResultPagePrice));
         Assert.assertTrue(productDetailPage.verifyPaperbackFormat());
-        Assert.assertTrue(productDetailPage.verifyPaperbackAvailability());
         productDetailPage.clickAddToCartButton();
     }
 

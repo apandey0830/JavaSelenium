@@ -19,9 +19,6 @@ public class SearchResultPage extends BasePage {
     @FindBy(xpath="//div[@class='s-widget-container s-spacing-small s-widget-container-height-small celwidget slot=MAIN template=SEARCH_RESULTS widgetId=search-results_1']//a[@class='a-size-base a-link-normal s-underline-text s-underline-link-text s-link-style a-text-bold'][normalize-space()='Paperback']")
     public WebElement paperbackFormat;
 
-    @FindBy(xpath="//span[@class='a-size-base a-color-price' and contains(text(),'left in stock (more on the way)')]")
-    public WebElement availableStock;
-
     @FindBy(css="div[class='s-widget-container s-spacing-small s-widget-container-height-small celwidget slot=MAIN template=SEARCH_RESULTS widgetId=search-results_1'] div[class='a-section a-spacing-none a-spacing-top-micro puis-price-instructions-style'] span[class='a-price-whole']")
     public WebElement paperbackPrice;
 
@@ -45,9 +42,6 @@ public class SearchResultPage extends BasePage {
         paperbackFormat.click();
     }
 
-    public boolean verifyPaperbackAvailability() {
-        return availableStock.getText().contains("in stock");
-    }
 
 
 

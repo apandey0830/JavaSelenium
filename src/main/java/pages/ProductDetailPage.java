@@ -27,9 +27,6 @@ public class ProductDetailPage extends BasePage {
     @FindBy(id = "add-to-cart-button")
     public WebElement addToCartButton;
 
-    @FindBy(xpath = "//span[@class='a-size-base a-color-price a-text-bold' and contains(text(),'left in stock (more on the way)')]")
-    public WebElement availableStock;
-
     public Boolean verifyBookTitle(String titleText) {
         return bookTitle.getText().contains(titleText);
     }
@@ -56,10 +53,6 @@ public class ProductDetailPage extends BasePage {
         if (addToCartButton.isDisplayed() && addToCartButton.isEnabled()) {
             addToCartButton.click();
         }
-    }
-
-    public boolean verifyPaperbackAvailability() {
-        return availableStock.getText().contains("in stock");
     }
 
 }
