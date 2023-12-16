@@ -32,14 +32,12 @@ public class BaseClass {
                 fis = new FileInputStream(
                         System.getProperty("user.dir") + "/src/test/resources/properties/Config.properties");
             } catch (FileNotFoundException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
             try {
                 config.load(fis);
                 log.debug("Config file loaded !!!");
             } catch (IOException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
 
