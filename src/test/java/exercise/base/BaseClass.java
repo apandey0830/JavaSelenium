@@ -52,7 +52,7 @@ public class BaseClass {
             if (config.getProperty("browser").equals("chrome")) {
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--incognito");
-                driver = new ChromeDriver();
+                driver = new ChromeDriver(options);
                 log.debug("Chrome Launched !!!");
             }
 
